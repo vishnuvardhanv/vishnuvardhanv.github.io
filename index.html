@@ -157,9 +157,9 @@
 					<textarea id="textArea_1" rows="10" cols="10"></textarea>
 				</div>
 			</section>
-			<section id="five" class="wrapper special">
-				<button onclick="xml2json()">↓</button>
-				<button onclick="json2xml()">↑</button>
+			<section id="five">
+				<button onclick="xml2json()" ondblclick="xml2json_pretty()">↓</button>
+				<button onclick="json2xml()" ondblclick="json2xml_pretty()">↑</button>
 			</section>
 			<section id="six" class="wrapper special">
 				
@@ -196,6 +196,7 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/xml2json.min.js"></script>
+			<script src="assets/js/vkbeautify.js"></script>
 			<script type="text/javascript">
 				function xml2json(){
 					var x2js = new X2JS();
@@ -209,6 +210,20 @@
 					try{
 					var jsonString = document.getElementById("textArea_2").value;
 					document.getElementById("textArea_1").value = x2js.json2xml_str(JSON.parse(jsonString));
+					}catch(err){alert(err);}
+				}
+				function xml2json_pretty(){
+					var x2js = new X2JS();
+					try{
+					var xmlText = document.getElementById("textArea_1").value;
+					document.getElementById("textArea_2").value = vkbeautify.json(JSON.stringify(x2js.xml_str2json(xmlText)), 4 );
+					}catch(err){alert(err);}
+				}
+				function json2xml_pretty(){
+					var x2js = new X2JS();
+					try{
+					var jsonString = document.getElementById("textArea_2").value;
+					document.getElementById("textArea_1").value = vkbeautify.xml(x2js.json2xml_str(JSON.parse(jsonString)));
 					}catch(err){alert(err);}
 				}
 			</script>
