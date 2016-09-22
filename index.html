@@ -139,10 +139,39 @@
 								<a href="#" class="button special">More</a>
 							</footer>
 						</article>
+						<article>
+							<div class="image fit">
+							</div>
+						</article>
 					</div>
 				</div>
 			</section>
-
+			<!-- Four -->
+			<section id="four" class="wrapper special">
+				<div class="inner">
+					<header class="align-center">
+						<h2>XML</h2>
+						<p>Enter Your XML</p>
+					</header>
+				<div class="flex flex-2">
+					<textarea id="textArea_1" rows="10" cols="10"></textarea>
+				</div>
+			</section>
+			<section id="five" class="wrapper special">
+				<button onclick="xml2json()">↓</button>
+				<button onclick="json2xml()">↑</button>
+			</section>
+			<section id="six" class="wrapper special">
+				
+				<div class="inner">
+					<header class="align-center">
+						<h2>JSON</h2>
+						<p>Enter Your JSON</p>
+					</header>
+				<div class="flex flex-2">
+					<textarea id="textArea_2" rows="10" cols="10"></textarea>
+				</div>
+			</section>
 		<!-- Footer -->
 			<footer id="footer">
 				<div class="inner">
@@ -166,6 +195,21 @@
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script type="text/javascript">
+				var x2js = new X2JS();
+				function xml2json(){
+					try{
+					var xmlText = document.getElementById("textArea_1").value;
+					document.getElementById("textArea_2").value = JSON.stringify(x2js.xml_str2json(xmlString));
+					}catch(err){alert(err);}
+				}
+				function json2xml(){
+					try{
+					var jsonString = document.getElementById("textArea_2").value;
+					document.getElementById("textArea_1").value = x2js.json2xml_str(JSON.parse(xmlString));
+					}catch(err){alert(err);}
+				}
+			</script>
 
 	</body>
 </html>
