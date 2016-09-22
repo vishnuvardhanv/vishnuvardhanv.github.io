@@ -201,14 +201,14 @@
 					var x2js = new X2JS();
 					try{
 					var xmlText = document.getElementById("textArea_1").value;
-					document.getElementById("textArea_2").value = JSON.stringify(x2js.xml_str2json(xmlString));
+					document.getElementById("textArea_2").value = JSON.stringify(x2js.xml_str2json(xmlText));
 					}catch(err){alert(err);}
 				}
 				function json2xml(){
 					var x2js = new X2JS();
 					try{
 					var jsonString = document.getElementById("textArea_2").value;
-					document.getElementById("textArea_1").value = x2js.json2xml_str(JSON.parse(xmlString));
+					document.getElementById("textArea_1").value = x2js.json2xml_str(JSON.parse(jsonString));
 					}catch(err){alert(err);}
 				}
 			</script>
