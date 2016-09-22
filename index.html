@@ -200,34 +200,7 @@
 			<script src="assets/js/xml2json.min.js"></script>
 			<script src="assets/js/vkbeautify.js"></script>
 			<script type="text/javascript">
-				function xml2json(){
-					var x2js = new X2JS();
-					try{
-					var xmlText = document.getElementById("textArea_1").value;
-					document.getElementById("textArea_2").value = JSON.stringify(x2js.xml_str2json(xmlText));
-					}catch(err){alert(err);}
-				}
-				function json2xml(){
-					var x2js = new X2JS();
-					try{
-					var jsonString = document.getElementById("textArea_2").value;
-					document.getElementById("textArea_1").value = x2js.json2xml_str(JSON.parse(jsonString));
-					}catch(err){alert(err);}
-				}
-				function xml2json_pretty(){
-					var x2js = new X2JS();
-					try{
-					var xmlText = document.getElementById("textArea_1").value;
-					document.getElementById("textArea_2").value = vkbeautify.json(JSON.stringify(x2js.xml_str2json(xmlText)), 4 );
-					}catch(err){alert(err);}
-				}
-				function json2xml_pretty(){
-					var x2js = new X2JS();
-					try{
-					var jsonString = document.getElementById("textArea_2").value;
-					document.getElementById("textArea_1").value = vkbeautify.xml(x2js.json2xml_str(JSON.parse(jsonString)));
-					}catch(err){alert(err);}
-				}
+				function xml2json(){var a=new X2JS;try{var b=document.getElementById("textArea_1").value;document.getElementById("textArea_2").value=JSON.stringify(a.xml_str2json(b))}catch(a){alert(a)}}function json2xml(){var a=new X2JS;try{var b=document.getElementById("textArea_2").value;document.getElementById("textArea_1").value=a.json2xml_str(JSON.parse(b))}catch(a){alert(a)}}function xml2json_pretty(){var a=new X2JS;try{var b=document.getElementById("textArea_1").value;document.getElementById("textArea_2").value=vkbeautify.json(JSON.stringify(a.xml_str2json(b)),4)}catch(a){alert(a)}}function json2xml_pretty(){var a=new X2JS;try{var b=document.getElementById("textArea_2").value;document.getElementById("textArea_1").value=vkbeautify.xml(a.json2xml_str(JSON.parse(b)))}catch(a){alert(a)}}
 			</script>
 
 	</body>
