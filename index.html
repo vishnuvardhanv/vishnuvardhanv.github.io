@@ -2,15 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Photo Search V2</title>
+    <title>Wish new ♥</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
+    <table>
+        <tr>
+            <td>
+                <a href="#" class="login" title="Login"><img src="png/facebook.png" /></a>
+            </td>
+            <td>
+                <a href="#" class="login" title="Login"><img src="png/google-photos.png" /></a>
+            </td>
+            <td>
+                <a onclick="window.open('https://api.instagram.com/oauth/authorize/?client_id=aa9fe693cffa4434b753da6c631a9fa2&redirect_uri=https://vishnuvardhanv.github.io/callback.html&response_type=token', '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes'); class="login" title="Login"><img src="png/instagram.png" /></a>
+            </td>
+        </tr>
+    </table>
 
-    <form id="form">
-        <input type="text" id="search" />
-        <a onclick="window.open('https://api.instagram.com/oauth/authorize/?client_id=aa9fe693cffa4434b753da6c631a9fa2&redirect_uri=https://vishnuvardhanv.github.io/callback.html&response_type=token', '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');">Share Page</a>
-    </form>
+
     <div id="instagram"></div>
     
     <footer>

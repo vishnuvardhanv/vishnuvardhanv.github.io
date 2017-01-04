@@ -14,8 +14,8 @@ window.Instagram = {
     },
 
     setAccessToken: function(opt){
-        alert(opt.access_token);
         this.config.access_token = opt.access_token;
+        loadInstagram();
     },
 
     /**
@@ -52,7 +52,7 @@ Instagram.init({
 });
 
 
-$( document ).ready(function() {
+function loadInstagram() {
 
     Instagram.recent(function( response ) {
         var $instagram = $( '#instagram' );
@@ -78,4 +78,4 @@ $( document ).ready(function() {
 
     });
 
-});
+}
