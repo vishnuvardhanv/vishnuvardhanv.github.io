@@ -14,6 +14,7 @@ window.Instagram = {
     },
 
     setAccessToken: function(opt){
+        alert(opt.access_token);
         this.config.access_token = opt.access_token;
     },
 
