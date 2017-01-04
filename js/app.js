@@ -10,6 +10,10 @@ window.Instagram = {
         opt = opt || {};
 
         this.config.client_id = opt.client_id;
+        
+    },
+
+    setAccessToken: function(opt){
         this.config.access_token = opt.access_token;
     },
 
@@ -43,8 +47,7 @@ window.Instagram = {
 };
 
 Instagram.init({
-    client_id: 'aa9fe693cffa4434b753da6c631a9fa2',
-    access_token: '4175543450.aa9fe69.1364c8d46e1b4a09bff9ab3097401012'
+    client_id: 'aa9fe693cffa4434b753da6c631a9fa2'
 });
 
 

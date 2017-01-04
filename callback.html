@@ -9,7 +9,10 @@
     <footer>
         <script type="text/javascript">
             if(window.location.href.indexOf("#access_token") !== -1){
-                alert(window.location.href.split('#access_token=')[1]);
+                opener.Instagram.setAccessToken({
+                    access_token: window.location.href.split('#access_token=')[1]
+                });
+                alert();
                 self.close();
             }
         </script>
