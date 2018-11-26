@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Wish new ♥</title>
+    <script src='https://www.google.com/recaptcha/api.js?render=6Lf-En0UAAAAAPz9rlKLJaDc80E9Trqsp4lzjnNh'></script>
+
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
@@ -19,7 +21,14 @@
             </td>
         </tr>
     </table>
-
+<script>
+grecaptcha.ready(function() {
+grecaptcha.execute('6Lf-En0UAAAAAPz9rlKLJaDc80E9Trqsp4lzjnNh', {action: 'action_name'})
+.then(function(token) {
+// Verify the token on the server.
+});
+});
+</script>
 
     <div id="instagram"></div>
     
